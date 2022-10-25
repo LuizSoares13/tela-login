@@ -38,13 +38,13 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
     background-color: white;
     width: 250px;
-    height: 550px;
+    height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.460);
+    transform: translate(-50%, -50%);
     transition: width .3s, height .3s;
     transition-timing-function: ease;
 }
@@ -74,23 +74,48 @@ div#formulario > p {
 
 div.campo {
     background-color: var(--cor1);
+    border: 2px solid var(--cor1);
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
-    margin: 5px 0px; 
+    border-radius: 8px;
+    margin: 5px 0px;
 }
 
 div.campo > label {
     display: none;
 }
 
-input[type=submit] {
+div.campo > i {
+    color: white;
+    /*background-color: black;*/
+    font-size: 2em;
+    width: 36px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(95% - 30px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-12px); /* usar sempre como ultima linha */
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+    outline: none;
+}
+
+form > input[type=submit] {
     display: block;
     font-size: 1em;
     width: 100%;
     height: 40px; 
-    background-color: var(--cor0);
+    background-color: #53aaa7;
     color: white;
     margin:auto;
     border: none;
@@ -98,7 +123,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+form > input[type=submit]:hover {
     background-color: #2d6462;
 }
 
